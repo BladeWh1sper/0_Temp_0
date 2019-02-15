@@ -4,7 +4,7 @@ from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 #binary = FirefoxBinary('C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe')
 driver = webdriver.Firefox()
 
-driver.get('http://google.com')
+driver.get('http://rbc.ru')
 print("done")
 input("Press any key to exit:")
 driver.quit()
