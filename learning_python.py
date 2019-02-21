@@ -6,4 +6,4 @@ def squared(x, y):
     return x * y
 
     pass
-print(squared(val, lite))
+print("This is the end number: ", squared(val, lite))
