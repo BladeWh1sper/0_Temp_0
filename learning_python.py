@@ -4,6 +4,4 @@ like = input("Second number: ")
 lite = int(like)
 def squared(x, y):
     return x * y
-
-    pass
 print("This is the end number: ", squared(val, lite))

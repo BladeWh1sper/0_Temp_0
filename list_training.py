@@ -16,4 +16,4 @@ print(planets)
 planets[5] = "Chery"
 print(planets)
 planets[5] = "Saturn"
-print(planets[3:-3])
+print(planets[0:3])
