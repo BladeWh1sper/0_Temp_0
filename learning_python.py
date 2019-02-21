@@ -1,7 +1,9 @@
-user_number = input ("Enter your number ")
+user_number = input ("Enter your number: ")
 val = int(user_number)
-def squared(x):
-    return x * x
+like = input("Second number: ")
+lite = int(like)
+def squared(x, y):
+    return x * y
 
     pass
-print(squared(val))
+print(squared(val, lite))
