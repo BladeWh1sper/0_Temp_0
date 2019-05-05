@@ -1,10 +1,26 @@
 from selenium import webdriver
-# from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
-# firefox_binary=binary
-# binary = FirefoxBinary('C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe')
-driver = webdriver.Firefox()
+import time
+import pandas as pd
 
-driver.get('http://rbc.ru')
+driver = webdriver.Firefox()
+driver.get('https://www.championat.com/football/_russiapl/tournament/2599/table/')
 print("done")
-input("Press any key to exit:")
+
+name_1 = list()
+score_1 = list()
+a=0
+m = 0
+while a<16:
+
+        a = a + 1
+        n = driver.find_elements_by_xpath('//span[@class="table-item__name"]')[m].text
+        name_1.append(n)
+        s = driver.find_elements_by_xpath('//td[@class="result-table__points _center"]/strong')[m].text
+        score_1.append(s)
+        m = m + 1
+        
+df = pd.DataFrame({'name': name_1 ,'score': score_1})
+df.to_csv('FootBall.csv', index=False, encoding='utf-8')
+print(df)
+
 driver.quit()
